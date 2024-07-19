@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F621B6D9-9FFD-4434-BE75-4E40B699057D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClipInspection</RootNamespace>
+    <AssemblyName>ClipInspection</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>C:\IVM\ClipInspection%28유신%29\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>C:\IVM\ClipInspection%28유신%29\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.DigitalCountLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\기타\Dlls\AxInterop.DigitalCountLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.DigitalCountLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\기타\Dlls\Interop.DigitalCountLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CCLink.cs" />
+    <Compile Include="CImageViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CImageViewer.designer.cs">
+      <DependentUpon>CImageViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CNumberBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CNumberBox.designer.cs">
+      <DependentUpon>CNumberBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPassword.Designer.cs">
+      <DependentUpon>FrmPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDescription5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDescription5.Designer.cs">
+      <DependentUpon>FrmDescription5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmJustAMoment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmJustAMoment.designer.cs">
+      <DependentUpon>FrmJustAMoment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModelList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModelList.designer.cs">
+      <DependentUpon>FrmModelList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReport.designer.cs">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWorker.Designer.cs">
+      <DependentUpon>FrmWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IVMInspect.cs" />
+    <Compile Include="IVMLibrary.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="MultiCam.cs" />
+    <Compile Include="paramData.cs" />
+    <Compile Include="paramINI.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="FrmRePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRePassword.Designer.cs">
+      <DependentUpon>FrmRePassword.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CImageViewer.resx">
+      <DependentUpon>CImageViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CNumberBox.resx">
+      <DependentUpon>CNumberBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPassword.resx">
+      <DependentUpon>FrmPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDescription5.resx">
+      <DependentUpon>FrmDescription5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmJustAMoment.resx">
+      <DependentUpon>FrmJustAMoment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModelList.resx">
+      <DependentUpon>FrmModelList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReport.resx">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWorker.resx">
+      <DependentUpon>FrmWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="FrmRePassword.resx">
+      <DependentUpon>FrmRePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Test.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Load.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SAVE.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RUN.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reset.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Live_On.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Live_Off.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Change.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Worker.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClipDescription5_1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGIN.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
